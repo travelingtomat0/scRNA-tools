@@ -3,6 +3,8 @@
 This repository contains self-programmed tools for scRNA-seq experiments. Also, below is a list of tools for scRNA experiments listed by their use-cases.
 For validation purposes there are some useful metrics that I have also listed and described below.
 
+# Contents and Summary of Toolbox
+
 # Cell-Type Annotation
 Cell type annotation can be divided into supervised, semi-supervised (prior-knowledge) and unsupervised methods.
 
