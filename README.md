@@ -23,9 +23,16 @@ Unsupervised:
 - SIMLR
 
 # Validation Metrics
-Given some gold-standard, we can always use standard cluster-validation techniques for validation purposes of cluster assignments (i.e. cell type annotations). For other cases (absence of labels or equivalent data) I have developed other validation metrics (as part of my Bachelor Thesis).
+Given some gold-standard, we can always use standard validation techniques and metrics. In absence of labeled data, cluster-validation techniques may be useful for validation purposes of cluster assignments (i.e. cell type annotations). Below I have listed the validation metrics that were deployed as part of my Bachelor Thesis.
+*For measuring similarity between cells based on scRNA-seq, different papers suggest that using correlation as a measure will give the best results.* 
 
-- 
+- *Intracluster compactness* measures the degree of intraclass similarity. The higher the compactness, the greater the intraclass similarity of each cell type. 
+- *Intercluster Complexity:* measures the degree of interclass similarity. The lower the complexity, the the smaller is the interclass similarity.
+-> High intracluster compactness and low intercluster complexity imply a good assignment performance on the dataset.
+
+- Intersample intracluster compactness can be used to measure the overall assignment performance for our specific task. If the cells assigned to a state are overall similar regardless of the sample they stem from, our assignments are more likely to be correct.
+
+- For actual validation, we need to look at overexpression of type-specific marker genes for assigned clusters.
 
 # Paper-Collection
 - Impact of similarity metrics on single-cell RNA-seq data clustering
