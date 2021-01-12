@@ -3,26 +3,27 @@
 This repository contains self-programmed tools for scRNA-seq experiments. Also, below is a list of tools for scRNA experiments listed by their use-cases.
 For validation purposes there are some useful metrics that I have also listed and described below.
 
-# Contents and Summary of Toolbox
+## Contents and Summary of Toolbox
 
-# Cell-Type Annotation
+## Cell-Type Annotation
 Cell type annotation can be divided into supervised, semi-supervised (prior-knowledge) and unsupervised methods.
 
 Supervised:
 - CNN's / ANN's???
 
 Semi-Supervised:
-- Cellassign
+- Cellassign --> performed consistently well on TuPro data set.
 - SCINA
-- Garnett
+- Garnett --> not used, due to issues with classification. Also contains a tool to evaluate marker genes.
+- scSorter --> unpublished method. GitHub https://github.com/hyguo2/scSorter contains the code, https://cran.r-project.org/web/packages/scSorter/vignettes/scSorter.html contains a tutorial.
 
 Unsupervised:
-- PCR and its variants
+- dimred with PCR, UMAP
 - RaceID, SC3, CIDR
 - RCA
-- SIMLR
+- SIMLR --> clustering method.
 
-# Validation Metrics
+## Validation Metrics
 Given some gold-standard, we can always use standard validation techniques and metrics. In absence of labeled data, cluster-validation techniques may be useful for validation purposes of cluster assignments (i.e. cell type annotations). Below I have listed the validation metrics that were deployed as part of my Bachelor Thesis.
 *For measuring similarity between cells based on scRNA-seq, different papers suggest that using correlation as a measure will give the best results.* 
 
@@ -34,8 +35,14 @@ Given some gold-standard, we can always use standard validation techniques and m
 
 - For actual validation, we need to look at overexpression of type-specific marker genes for assigned clusters.
 
-# Paper-Collection
+## Paper-Collection
 - Impact of similarity metrics on single-cell RNA-seq data clustering
 - Autoencoder-based cluster ensembles for single-cell RNA-seq data analysis
 - Learning for single-cell assignment
 - (Bayesian Correlation is a robust similarity measure for single-cell RNA-seq data)
+- Integrating Deep Supervised, Self-Supervised andUnsupervised Learning for Single-Cell RNA-seqClustering and Annotation
+- Cell Type Identification from Single-CellTranscriptomic Data via Semi-supervised Learning
+
+## Framework-Collection
+- Seurat (for normalization, analysis of feature expression  etc.)
+- scran (for size factor estimation)
