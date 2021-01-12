@@ -13,7 +13,7 @@ Supervised:
 
 Semi-Supervised:
 - Cellassign --> performed consistently well on TuPro data set.
-- SCINA
+- SCINA --> Important note: while cellassign takes a binary marker matrix as input, SCINA has its own preprocessing function which takes a csv marker-file and converts it to a marker gene list.
 - Garnett --> not used, due to issues with classification. Also contains a tool to evaluate marker genes.
 - scSorter --> unpublished method. GitHub https://github.com/hyguo2/scSorter contains the code, https://cran.r-project.org/web/packages/scSorter/vignettes/scSorter.html contains a tutorial.
 
