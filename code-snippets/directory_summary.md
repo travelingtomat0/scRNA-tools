@@ -10,3 +10,5 @@
 - [visualize_all_tumors.R]
 
 - [ensemble_autoenc_code.R]
+
+- [subclonal_cnv_analysis.R] takes an infercnv dendrogram as an input (and raw counts, which can be omitted if script is changed such that previously calculated umap-plot is used). It then removes non melanocytic cells according to Nexus and Infercnv annotations, extracts the subclonal structures (up to level k, which can be specified in the call of subtree_split(tree, 1, k)) and then visualizes the plot based on the subclonal structures found by infercnv.
